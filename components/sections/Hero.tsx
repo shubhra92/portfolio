@@ -26,7 +26,7 @@ export default function Hero() {
             </Button>
 
             <Button variant="outline" size="lg" asChild>
-              <Link href="#contact">
+              <Link href="/resume.pdf" download target="_self">
                 <Download className="mr-2 h-4 w-4" />
                 Download Resume
               </Link>
@@ -34,10 +34,10 @@ export default function Hero() {
           </div>
 
           <div className="flex justify-center space-x-6">
-            <Link href="https://github.com" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Link href="https://github.com/shubhra92" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">
               <Github className="h-6 w-6" />
             </Link>
-            <Link href="https://linkedin.com" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Link href="https://www.linkedin.com/in/shubhra-ghosh" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">
               <Linkedin className="h-6 w-6" />
             </Link>
           </div>

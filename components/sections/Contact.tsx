@@ -9,7 +9,16 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
-import { Mail, MapPin, Phone, Send } from "lucide-react"
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Github,
+  Send,
+  User,
+} from "lucide-react"
+import Link from "next/link"
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -35,20 +44,26 @@ export default function Contact() {
     {
       icon: Mail,
       label: "Email",
-      value: "hello@shubhraghosh.dev",
-      href: "mailto:hello@shubhraghosh.dev",
+      value: "shubhrogh765@gmail.com",
+      href: "mailto:shubhrogh765@gmail.com",
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
+      value: "+91 9153149814",
+      href: "tel:+919153149814",
     },
     {
-      icon: MapPin,
-      label: "Location",
-      value: "San Francisco, CA",
-      href: "#",
+      icon: Linkedin,
+      label: "LinkedIn",
+      value: "linkedin.com/in/shubhra-ghosh",
+      href: "https://www.linkedin.com/in/shubhra-ghosh/",
+    },
+    {
+      icon: Github,
+      label: "GitHub",
+      value: "github.com/shubhra92",
+      href: "https://github.com/shubhra92",
     },
   ]
 
@@ -75,12 +90,17 @@ export default function Contact() {
             <div className="space-y-4">
               {contactInfo.map((info, index) => (
                 <div key={index} className="flex items-center space-x-4">
-                  <div className="flex-shrink-0">
-                    <info.icon className="h-5 w-5 text-primary" />
+                  <div className="bg-primary/10 text-primary p-3 rounded-full">
+                    <info.icon size={20} />
                   </div>
                   <div>
-                    <p className="font-medium">{info.label}</p>
-                    <a href={info.href} className="text-muted-foreground hover:text-primary transition-colors">
+                    <p className="text-sm font-medium">{info.label}</p>
+                    <a
+                      href={info.href}
+                      className="text-muted-foreground text-sm hover:text-primary transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       {info.value}
                     </a>
                   </div>
