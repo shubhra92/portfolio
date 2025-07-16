@@ -17,7 +17,6 @@ export const metadata: Metadata = {
   },
   description: "Full Stack Developer specializing in React, Next.js, Node.js, TypeScript, PostgreSQL, and Docker.",
   metadataBase: new URL("https://shubhraghosh.dev"),
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
