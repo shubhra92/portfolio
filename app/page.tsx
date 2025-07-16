@@ -39,12 +39,12 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Resume />
-      <Contact />
-      <Blog />
+      {process.env.NODE_ENV !== "production" && <About />}
+      {process.env.NODE_ENV !== "production" && <Skills />}
+      {process.env.NODE_ENV !== "production" && <Projects />}
+      {process.env.NODE_ENV !== "production" && <Resume />}
+      {process.env.NODE_ENV !== "production" && <Contact />}
+      {process.env.NODE_ENV !== "production" && <Blog />}
     </main>
   )
 }
